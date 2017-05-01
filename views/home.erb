@@ -1,0 +1,12 @@
+<h1>Welcome to my app</h1>
+<p>my name is <%= @name %></p>
+
+<% @restaurants.each do |restaurant| %>
+  <div>
+    <a href="/restaurants/<%= restaurant.id %>">
+      <%= restaurant.name %> - <%= restaurant.address %>
+    </a>
+  </div>
+<% end %>
+
+<a href="/restaurants/new">Add new restaurant</a>
